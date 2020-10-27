@@ -11,4 +11,22 @@ export class AppComponent {
   PI: number = Math.PI;
   percentage: number = 0.235;
   monthlyPayment: number = 1234.6;
+  promiseExample = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('succesfully');
+    }, 4500);
+  });
+  date = new Date();
+  active: boolean = true;
+
+  nobelPrize = {
+    name: 'Peter Handke',
+    key: 'literature',
+    addres: {
+      street: 'wellington',
+      build: 20,
+      floor: 2,
+      door: 3,
+    },
+  };
 }
