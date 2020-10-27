@@ -37,6 +37,46 @@
                     <td>Slice:0: 4</td>
                     <td>{{smallArray | slice:0:4}}</td>
                 </tr>
+                <tr>
+                    <td>{{PI}}</td>
+                    <td>decimals:'3.0-0'</td>
+                    <!-- <td>{{PI | number:'1.-0-0' }}</td> -->
+                    <td>{{PI | number: '3.0-0'}}</td>
+                </tr>
+                <tr>
+                    <td>{{PI}}</td>
+                    <td>number:'3.0-0'</td>
+                    <!-- give me the number and 2 decimals -->
+                    <td>{{PI | number: '.0-2'}}</td>
+                </tr>
+                <tr>
+                    <td>{{percentage}}</td>
+                    <td>percentage | percent</td>
+                    <td>{{percentage | percent}}</td>
+                </tr>
+                <!-- my percentage format(two enter numbers and one dcimals) -->
+                <tr>
+                    <td>{{percentage}}</td>
+                    <td>percentage | percent:'2.1-1'</td>
+                    <td>{{percentage | percent:'2.1-1'}}</td>
+                </tr>
+                <tr>
+                    <td>{{monthlyPayment}}</td>
+                    <td>monthlyPayment | currency</td>
+                    <td>{{monthlyPayment | currency}}</td>
+                </tr>
+                <!-- adding local currency -->
+                <tr>
+                    <td>{{monthlyPayment}}</td>
+                    <td> monthlyPayment | currency:'GTQ'</td>
+                    <td>{{monthlyPayment | currency:'GTQ'}}</td>
+                </tr>
+                <!-- pass only the symbol currency and quit decimals is well -->
+                <tr>
+                    <td>{{monthlyPayment}}</td>
+                    <td> monthlyPayment | currency:'GTQ':'symbol-narrow':'.0-0'</td>
+                    <td>{{monthlyPayment | currency:'GTQ':'symbol-narrow':'.0-0'}}</td>
+                </tr>
             </tbody>
             <h3>normal ngfor</h3>
             <ul>
