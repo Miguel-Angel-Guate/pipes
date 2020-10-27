@@ -22,7 +22,30 @@
                     <td>lowerCase</td>
                     <td>{{name | lowercase}}</td>
                 </tr>
+                <tr>
+                    <td>{{name}}</td>
+                    <td>Slice: 4</td>
+                    <td>{{name | slice:4}}</td>
+                </tr>
+                <tr>
+                    <td>{{name}}</td>
+                    <td>Slice:0: 7</td>
+                    <td>{{name | slice:0:7}}</td>
+                </tr>
+                <tr>
+                    <td>{{smallArray}}</td>
+                    <td>Slice:0: 4</td>
+                    <td>{{smallArray | slice:0:4}}</td>
+                </tr>
             </tbody>
+            <h3>normal ngfor</h3>
+            <ul>
+                <li *ngFor="let item of smallArray">{{item}}</li>
+            </ul>
+            <h3>ng for with slice 0:3</h3>
+            <ul>
+                <li *ngFor="let item of smallArray | slice:0:3"> {{item}}</li>
+            </ul>
 
         </div>
     </div>
